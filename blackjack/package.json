@@ -1,0 +1,24 @@
+{
+  "name": "blackjack",
+  "version": "0.0.0",
+  "description": "A simple blackjack game built with Redux",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server"
+  },
+  "author": "Thomas Marek",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^18.0.0",
+    "nock": "^9.0.2",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "redux": "^3.6.0"
+  }
+}

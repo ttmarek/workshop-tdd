@@ -1,6 +1,6 @@
 const Redux = require('redux');
 
-const { getDeck, drawCard } = require('./app/actions');
+const { getDeck, drawCard } = require('./app/event-creators');
 const { reducer } = require('./app/reducer');
 const { countSelector } = require('./app/selectors');
 const { renderUI } = require('./app/render-ui');

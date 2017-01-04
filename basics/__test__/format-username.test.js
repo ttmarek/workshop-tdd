@@ -1,8 +1,11 @@
 const voca = require('voca');
 const { formatUsername } = require('../format-username');
 
-// EXAMPLE
-// fn(stringLib, ' mr hot pants') = 'mr-hot-pants'
+// [] KNOWLEDGE: you know what an integration test is
+// [] WISDOM: you understand when an integration test is better than a unit test
+// [] WISDOM: you understand why it is better to test one thing at a time
+
+// Happy Example: formatUsername(voca, ' mr hot pants') = 'mr-hot-pants'
 
 describe('formatUsername(stringLib, username)', () => {
   it('trims the username and converts any spaces to dashes', () => {

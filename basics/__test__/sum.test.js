@@ -1,5 +1,13 @@
 const { sum } = require('../sum');
 
+// [] SKILL: you can write and implement tests using Jest
+// [] SKILL: you can write well-structured tests (3A's)
+// [] KNOWLEDGE: you know what a unit test is
+
+// Happy Example: sum(2, 2) returns 4
+// Edgy Example: sum(Infinity, -Infinity) returns 0
+// Sad Example: sum(undefined, 10) returns 0
+
 describe('sum(a, b)', () => {
   it('returns the sum of a and b', () => {
     // Arrange

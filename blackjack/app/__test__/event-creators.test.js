@@ -37,7 +37,7 @@ describe('EVENT CREATOR: getDeck(dispatch)', () => {
   });
 });
 
-describe('EVENT CREATOR: drawCard(dispatch)', () => {
+describe('EVENT CREATOR: drawCard(dispatch, deckId)', () => {
   afterEach(() => {
     nock.cleanAll();
   });

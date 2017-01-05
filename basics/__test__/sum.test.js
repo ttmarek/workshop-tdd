@@ -8,40 +8,38 @@ const { sum } = require('../sum');
 // Edgy Example: sum(Infinity, -Infinity) returns 0
 // Sad Example: sum(undefined, 10) returns 0
 
-describe('sum(a, b)', () => {
-  it('returns the sum of a and b', () => {
-    // Arrange
+describe('Happy Example: sum(2, 2)', () => {
+  it('returns 4', () => {
+    // ARRANGE
     const a = 2;
     const b = 2;
-
-    // Act
-    const result = sum(a,b);
-
-    // Assert
+    // ACT
+    const result = sum(2, 2);
+    // ASSERT
     expect(result).toBe(4); // strict equality (===)
-  }); // Happy Path
-
-  // Boundary Conditions, Edge Cases
-  describe('When a is Infinity and b is -Infinity', () => {
-    it('returns zero', () => {
-      const a = Infinity;
-      const b = -1 * Infinity;
-
-      const result = sum(a, b);
-
-      expect(result).toBe(0);
-    });
   });
+});
 
-  // Sad Path
-  describe('When a is undefined and b is defined', () => {
-    it('returns zero', () => {
-      const a = undefined;
-      const b = 2;
+describe('Edgy Example: sum(Infinity, -Infinity)', () => {
+  it('returns 0', () => {
+    // ARRANGE
+    const a = Infinity;
+    const b = -Infinity;
+    // ACT
+    const result = sum(a, b);
+    // ASSERT
+    expect(result).toBe(0);
+  });
+});
 
-      const result = sum(a, b);
-
-      expect(result).toBe(0);
-    });
+describe('Sad Example: sum(undefined, 10)', () => {
+  it('returns 0', () => {
+    // ARRANGE
+    const a = undefined;
+    const b = 10;
+    // ACT
+    const result = sum(a, b);
+    // ASSERT
+    expect(result).toBe(0);
   });
 });

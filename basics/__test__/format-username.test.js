@@ -5,35 +5,31 @@ const { formatUsername } = require('../format-username');
 // [] WISDOM: you understand when an integration test is better than a unit test
 // [] WISDOM: you understand why it is better to test one thing at a time
 
-// Happy Example: formatUsername(voca, ' mr hot pants') = 'mr-hot-pants'
-
-describe('formatUsername(stringLib, username)', () => {
-  it('trims the username and converts any spaces to dashes', () => {
+// Happy Example: formatUsername(stringLib, ' mr hot pants') = 'mr-hot-pants'
+describe('1. Happy Example: formatUsername(stringLib, " mr hot pants")', () => {
+  it('returns "mr-hot-pants"', () => {
     // ARRANGE
     const stringLib = voca;
-    const username = ' some name ';
-
+    const username = ' mr hot pants';
     // ACT
-    const formattedUsername = formatUsername(stringLib, username);
-
+    const result = formatUsername(stringLib, username);
     // ASSERT
-    expect(formattedUsername).toEqual('some-name'); // Deep Equal
+    expect(result).toEqual('mr-hot-pants');
   });
+});
 
-  // ANOTHER WAY TO WRITE THIS TEST:
-  it('trims the username and converts any spaces to dashes (unit)', () => {
+describe('2. Happy Example: formatUsername(stringLib, " mr hot pants")', () => {
+  it('trims and slugifies the username', () => {
     // ARRANGE
     const stringLib = {
-      trim: jest.fn(() => 'some name'),  // STUB
-      slugify: jest.fn(), // SPY
+      trim: jest.fn(() => 'mr hot pants'), // stub (returns something)
+      slugify: jest.fn(), // spy (just check that it was called)
     };
-    const username = ' some name ';
-
+    const username = ' mr hot pants';
     // ACT
-    const formattedUsername = formatUsername(stringLib, username);
-
+    formatUsername(stringLib, username);
     // ASSERT
-    expect(stringLib.trim).toHaveBeenCalledWith(username);
-    expect(stringLib.slugify).toHaveBeenCalledWith('some name');
+    expect(stringLib.trim).toHaveBeenCalled();
+    expect(stringLib.slugify).toHaveBeenCalledWith('mr hot pants');
   });
 });

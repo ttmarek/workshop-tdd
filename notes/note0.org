@@ -18,6 +18,7 @@
 *** GOOD QUESTIONS TO ASK
  - Why didn't we write a test for case X?
  - Why didn't you write the test (this) way?
+ - Is test coverage important?
  - How do you know how many tests to write? When to stop writing them?
    - user story > AC > tests
    - data part of the same collection (ticket3, king, queen, jack)

@@ -27,6 +27,15 @@
  - How do you pronounce GIF?
  - Does lowering the federal corporate income tax rate create jobs?
 
+
+* INTRO
+ - Type on the screen
+ - Make sure everyone can read okay
+ - Type the agenda
+ - 1. mini clarity canvas
+ - 2. basic overview of unit/integration testing
+ - 3. build an app (show blackjack app)
+
 * PART I
   - (skill) you can write and implement tests using Jest
   - (skill) you can write well-structured tests (3A's)

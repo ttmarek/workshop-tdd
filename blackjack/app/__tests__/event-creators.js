@@ -4,7 +4,7 @@ const {
   drawCard,
 } = require('../event-creators');
 
-describe('EVENT CREATOR: getDeck(dispatch)', () => {
+describe('getDeck(dispatch)', () => {
   afterEach(() => {
     nock.cleanAll();
   });
@@ -37,7 +37,7 @@ describe('EVENT CREATOR: getDeck(dispatch)', () => {
   });
 });
 
-describe('EVENT CREATOR: drawCard(dispatch, deckId)', () => {
+describe('drawCard(dispatch, deckId)', () => {
   afterEach(() => {
     nock.cleanAll();
   });

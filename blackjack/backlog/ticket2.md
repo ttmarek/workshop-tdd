@@ -7,9 +7,6 @@ As a player I can click a button to draw a card from the six deck.
 > When the user clicks a button labelled "Hit Me!"
 > Then a new card is drawn from the 6 deck
 > And an image of that card is displayed beneath the hit-me button
-> When the user clicks the hit-me button again
-> Then another card is drawn from the 6 deck
-> And an image of that card is displayed next to the previous card
 
 ----
 

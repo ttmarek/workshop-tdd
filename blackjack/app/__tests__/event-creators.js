@@ -4,11 +4,11 @@ const {
   drawCard,
 } = require('../event-creators');
 
-describe('getDeck(dispatch)', () => {
-  afterEach(() => {
-    nock.cleanAll();
-  });
+afterEach(() => {
+  nock.cleanAll();
+});
 
+describe('getDeck(dispatch)', () => {
   describe('When the request to get a new 6 deck is successful', () => {
     it('dispatches the DECK_RETRIEVED event with the new deck Id.', () => {
       // ARRANGE
@@ -38,10 +38,6 @@ describe('getDeck(dispatch)', () => {
 });
 
 describe('drawCard(dispatch, deckId)', () => {
-  afterEach(() => {
-    nock.cleanAll();
-  });
-
   describe('When the request to get a new card is successful', () => {
     it('dispatches the `CARD_RETRIEVED` event with the new card object', () => {
       // ARRANGE

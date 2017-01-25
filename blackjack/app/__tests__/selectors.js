@@ -2,7 +2,7 @@ const {
   countSelector,
 } = require('../selectors');
 
-describe('SELECTOR: countSelector(drawnCards)', () => {
+describe('countSelector(drawnCards)', () => {
   describe('When the hand contains a KH, and an 8C', () => {
     it('returns 18', () => {
       // ARRANGE

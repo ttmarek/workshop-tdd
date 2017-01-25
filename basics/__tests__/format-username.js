@@ -2,6 +2,8 @@ const voca = require('voca');
 const { formatUsername } = require('../format-username');
 
 // you know what an integration test is
+// you know what a stub is and how to make one in Jest
+// you know what a spy is and how to make one in Jest
 // you understand when an integration test is better than a unit test
 // you understand why it is better to test one thing at a time
 

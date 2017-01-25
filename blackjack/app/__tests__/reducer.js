@@ -19,7 +19,8 @@ describe('On DECK_RETRIEVED', () => {
 });
 
 describe('On CARD_RETRIEVED', () => {
-  describe('When no cards have been drawn previously', () => {
+  it('hydrates the state with the card object', () => {
+    // ARRANGE
     const action = {
       type: 'CARD_RETRIEVED',
       payload: {
@@ -33,54 +34,15 @@ describe('On CARD_RETRIEVED', () => {
       drawnCards: [],
     };
 
+    // ACT
     const newState = reducer(state, action);
 
-    it('hydrates the state with the card object', () => {
-      expect(newState.drawnCards).toEqual([{
-        "image": "https://deckofcardsapi.com/static/img/KH.png",
-        "value": "KING",
-        "suit": "HEARTS",
-        "code": "KH"
-      }]);
-    });
-  });
-
-  describe('When some cards have already been drawn', () => {
-    const action = {
-      type: 'CARD_RETRIEVED',
-      payload: {
-        "image": "https://deckofcardsapi.com/static/img/KH.png",
-        "value": "KING",
-        "suit": "HEARTS",
-        "code": "KH"
-      },
-    };
-    const state = {
-      drawnCards: [{
-        "image": "https://deckofcardsapi.com/static/img/KH.png",
-        "value": "KING",
-        "suit": "HEARTS",
-        "code": "KH"
-      }],
-    };
-
-    const newState = reducer(state, action);
-
-    it('adds the new card object to the array of previously drawn cards', () => {
-      expect(newState.drawnCards).toEqual([
-        {
-          "image": "https://deckofcardsapi.com/static/img/KH.png",
-          "value": "KING",
-          "suit": "HEARTS",
-          "code": "KH"
-        },
-        {
-          "image": "https://deckofcardsapi.com/static/img/KH.png",
-          "value": "KING",
-          "suit": "HEARTS",
-          "code": "KH"
-        }
-      ]);
-    });
+    // ASSERT
+    expect(newState.drawnCards).toEqual([{
+      "image": "https://deckofcardsapi.com/static/img/KH.png",
+      "value": "KING",
+      "suit": "HEARTS",
+      "code": "KH"
+    }]);
   });
 });

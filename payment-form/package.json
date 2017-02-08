@@ -1,20 +1,21 @@
 {
   "name": "payment-form",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "description": "A simple payment form built with Redux",
   "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "webpack-dev-server"
+  },
+  "author": "Thomas Marek",
+  "license": "MIT",
   "devDependencies": {
-    "jest": "^18.1.0",
-    "react-scripts": "0.8.5"
+    "jest": "^18.0.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
     "redux": "^3.6.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest --watch",
-    "eject": "react-scripts eject"
   }
 }

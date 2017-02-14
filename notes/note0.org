@@ -10,7 +10,7 @@
 * WHITEBOARD
 ** A GOOD TEST...
  - is simple (don't write tests that need tests)
- - is singular in purpose (test one behaviour/path/thing at a time)
+ - is singular in purpose (test one behaviour/path/thing at a time, and only test it once)
  - is isolated (don't share state between tests)
  - is blind (test behaviour, not implementation)
 

@@ -1,11 +1,9 @@
 * SITES
- - github.com/ttmarek/workshop-tdd
- - vocajs.com
- - deckofcardsapi.com
- - github.com/node-nock/nock
-
-* VISUAL AIDS
- - car and engine picture (why we don't test index.js)
+ - https://github.com/ttmarek/workshop-tdd
+ - https://github.com/mikec/sazerac
+ - https://vocajs.com
+ - http://deckofcardsapi.com
+ - https://github.com/node-nock/nock
 
 * WHITEBOARD
 ** A GOOD TEST...
@@ -14,45 +12,11 @@
  - is isolated (don't share state between tests)
  - is blind (test behaviour, not implementation)
 
-** QUESTIONS
-*** GOOD QUESTIONS TO ASK
- - Why didn't we write a test for case X?
- - Why didn't you write the test (this) way?
- - Is test coverage important?
- - How do you know how many tests to write? When to stop writing them?
-   - user story > AC > tests
-   - data part of the same collection (ticket3, king, queen, jack)
-*** POOR QUESTIONS TO ASK
- - Is a hotdog a sandwich?
- - What happened to Angular 3?
- - How do you pronounce GIF?
- - Does lowering the federal corporate income tax rate create jobs?
-
-
-* INTRO
- - Type on the screen
- - Make sure everyone can read okay
- - Type the agenda
- - 1. mini clarity canvas
- - 2. basic overview of unit/integration testing
- - 3. build an app (show blackjack app)
-
-* PART I
+* Topics
   - (skill) you can write and implement tests using Jest
   - (skill) you can write well-structured tests (3A's)
   - (knowledge) you know what a unit test is
   - (knowledge) you know what an integration is
   - (wisdom) you understand when an integration test is better than a unit test
   - (wisdom) you understand why it is better to test one thing at a time
-
-* PART II
-  - (skill) you can break down a user story into tests
-
-* NOTES ON TEACHING
- + In Part II walk them through the first ticket, then give them time
-   to work through the second and third ticket's on their own before
-   going through it yourself.
- + Tell the attendees: To get the most out of the workshop, when I
-   type, you type (i.e. follow along on your own computer). But let
-   the attendees go wild on their own when implementing features
-   (after the tests have been written).
+  - (skill) you can break down a user story with AC into tests

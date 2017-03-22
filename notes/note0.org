@@ -24,6 +24,16 @@
 * Objective
  - Get a feel for testing and TDD
 
+
+
+- we learned how to write and run tests using Jest (means you know Jasmine too).
+- we built unit tests using the 3As (Arrange, Act, Assert).
+- we learned that a bug is test case that hasn't been written yet.
+- we practiced TDD flow: test, watch it fail, make it pass, refactor?
+
+- we practiced breaking AC and TR into tests
+- we practiced
+
 * Payment Form
  - Instructor: explain user story and acceptance criteria.
  - Instructor (you type): type out TR1 expected data transform

@@ -11,7 +11,7 @@
   "author": "Thomas Marek",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^18.0.0",
+    "jest": "^19.0.2",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

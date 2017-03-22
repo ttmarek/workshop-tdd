@@ -20,3 +20,24 @@
   - (wisdom) you understand when an integration test is better than a unit test
   - (wisdom) you understand why it is better to test one thing at a time
   - (skill) you can break down a user story with AC into tests
+
+* Objective
+ - Get a feel for testing and TDD
+
+* Payment Form
+ - Instructor: explain user story and acceptance criteria.
+ - Instructor (you type): type out TR1 expected data transform
+ - Instructor (you type): write test for TR1
+ - Instructor (you type): run TR1 test, and watch fail
+ - Instructor: make test pass, send completed code in Slack
+ - Instructor (you type): fill in blanks for TR2.
+ - Instructor (you type): write test for TR2.
+ - Instructor (you type): run TR2 test, and watch fail
+ - Students: fill in blanks for TR3, AC1, AC2
+ - Students: get into groups write tests for TR3, AC1, and AC2 on the board
+ - Students: type tests into computer
+ - Instructor (you type): run tests, and watch fail
+ - Instructor: make test pass, send completed code in Slack
+ - Students: fill in blanks for AC3.1, AC3.2, AC3.3, AC3.4
+ - Students: write tests for AC3.1, AC3.2. AC3.3, AC3.4
+ - Instructor (you type): run tests, and watch fail

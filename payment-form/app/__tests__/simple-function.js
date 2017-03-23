@@ -4,7 +4,7 @@ function sum(a, b) {
 
 // Examples
 // sum(2, 5) returns 7
-// sum(Infinity, -Infinity) returns 0
+// BUG sum(Infinity, -Infinity) returns NaN should return 0
 
 describe('sum(2, 5)', () => {
   it('returns 7', () => {

@@ -1,17 +1,15 @@
-const initialState = {
-  phoneNumber: '',
-};
-
 function phoneNumberReducer(action) {
-  const phoneNumber = action.payload.replace(/(\s|[^\d])/g, '').slice(0, 10);
-  return { phoneNumber };
-}
-
-function reducer(state = initialState, action) {
   if (action.type === 'PHONE_NUMBER_ENTERED') {
-    return phoneNumberReducer(action);
+    const phoneNumber = action.payload.replace(/(\s|[^\d])/g, '').slice(0, 10);
+    return { phoneNumber };
   }
-  return state;
+  return {};
 }
 
-module.exports = { reducer, phoneNumberReducer };
+module.exports = {
+  phoneNumberReducer,
+  reducer: (state, action) => {
+    console.log(`Action ${action.type}`, action);
+    return phoneNumberReducer(action);
+  },
+};

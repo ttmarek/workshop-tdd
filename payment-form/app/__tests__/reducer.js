@@ -1,70 +1,45 @@
-const { reducer } = require('../reducer');
+const { phoneNumberReducer } = require('../reducer');
 
 describe('On PHONE_NUMBER_ENTERED', () => {
   it('updates the state with the entered phone number', () => {
     // ARRANGE
-    const prevState = {
-      phoneNumber: '',
-    };
-    const action = {
-      type: 'PHONE_NUMBER_ENTERED',
-      payload: '123',
-    };
+    const action = { type: 'PHONE_NUMBER_ENTERED', payload: '123' };
     // ACT
-    const newState = reducer(prevState, action);
+    const newState = phoneNumberReducer(action);
     // ASSERT
-    expect(newState).toEqual({
-      phoneNumber: '123',
+    expect(newState).toEqual({ phoneNumber: '123' });
+  });
+
+  describe('when a number with formatting is entered', () => {
+    it('strips away all the formatting', () => {
+      // ARRANGE
+      const action = { type: 'PHONE_NUMBER_ENTERED', payload: '(123) 456-78' };
+      // ACT
+      const newState = phoneNumberReducer(action);
+      // ASSERT
+      expect(newState).toEqual({ phoneNumber: '12345678' });
     });
   });
+
   describe('when a letter is entered', () => {
     it('ignores the letter', () => {
       // ARRANGE
-      const prevState = {
-        phoneNumber: '123',
-      };
-      const action = {
-        type: 'PHONE_NUMBER_ENTERED',
-        payload: '123a',
-      };
+      const action = { type: 'PHONE_NUMBER_ENTERED', payload: '123a' };
       // ACT
-      const newState = reducer(prevState, action);
+      const newState = phoneNumberReducer(action);
       // ASSERT
-      expect(newState).toEqual(prevState);
+      expect(newState).toEqual({ phoneNumber: '123' });
     });
   });
-  describe('when with formatting is entered', () => {
-    it('strips away all the formatting', () => {
-      // ARRANGE
-      const prevState = {
-        phoneNumber: '1234567',
-      };
-      const action = {
-        type: 'PHONE_NUMBER_ENTERED',
-        payload: '(123) 456-78'
-      };
-      // ACT
-      const newState = reducer(prevState, action);
-      // ASSERT
-      expect(newState).toEqual({
-        phoneNumber: '12345678',
-      });
-    });
-  });
-  describe('when more than 10 digits are entered', () => {
+
+  describe('when a number with more than 10 digits is entered', () => {
     it('ignores anything past the 10th digit', () => {
       // ARRANGE
-      const prevState = {
-        phoneNumber: '1234567890'
-      };
-      const action = {
-        type: 'PHONE_NUMBER_ENTERED',
-        payload: '(123) 456-78909'
-      };
+      const action = { type: 'PHONE_NUMBER_ENTERED', payload: '(123) 456-78909' };
       // ACT
-      const newState = reducer(prevState, action);
+      const newState = phoneNumberReducer(action);
       // ASSERT
-      expect(newState).toEqual(prevState);
+      expect(newState).toEqual({ phoneNumber: '1234567890' });
     });
   });
 });

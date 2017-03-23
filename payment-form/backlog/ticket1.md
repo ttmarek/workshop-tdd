@@ -25,40 +25,40 @@ And,
 
 
 TR1 (Redux)
-Given `"123"`
-Returns `{ type: 'PHONE_NUMBER_ENTERED', payload: "123"}`
+Given `'123'`
+Returns `{ type: 'PHONE_NUMBER_ENTERED', payload: '123'}`
 
 TR2 (phoneNumber key)
-Given `{ type: 'PHONE_NUMBER_ENTERED', payload: "123"}`
-Returns `{ phoneNumber: "123" }`
+Given `{ type: 'PHONE_NUMBER_ENTERED', payload: '123'}`
+Returns `{ phoneNumber: '123' }`
 
 TR3 (no formatting)
-Given `{ type: 'PHONE_NUMBER_ENTERED', payload: "(123) 456-7890"}`
-Returns `{ phoneNumber: "1234567890" }`
+Given `{ type: 'PHONE_NUMBER_ENTERED', payload: '(123) 456-78'}`
+Returns `{ phoneNumber: '12345678' }`
 
 AC1 (no letters)
-Given `{ type: 'PHONE_NUMBER_ENTERED', payload: "123a"}`
-Returns `{ phoneNumber: "123" }`
+Given `{ type: 'PHONE_NUMBER_ENTERED', payload: '123a'}`
+Returns `{ phoneNumber: '123' }`
 
 AC2 (max ten digits)
-Given `{ type: 'PHONE_NUMBER_ENTERED', payload: "(123) 456-78909"}`
-Returns `{ phoneNumber: "1234567890" }`
+Given `{ type: 'PHONE_NUMBER_ENTERED', payload: '(123) 456-78909'}`
+Returns `{ phoneNumber: '1234567890' }`
 
 AC3.1 (formatting)
-Given `{ phoneNumber: "123" }`
-Returns `"123"`
+Given `{ phoneNumber: '123' }`
+Returns `'123'`
 
 AC3.2 (formatting)
-Given `{ phoneNumber: "1234" }`
-Returns `"(123) 4"`
+Given `{ phoneNumber: '1234' }`
+Returns `'(123) 4'`
 
 AC3.3 (formatting)
-Given `{ phoneNumber: "1234567" }`
-Returns `"(123) 456-7"`
+Given `{ phoneNumber: '1234567' }`
+Returns `'(123) 456-7'`
 
 AC3.4 (formatting)
-Given `{ phoneNumber: "1234567890" }`
-Returns `"(123) 456-7890"`
+Given `{ phoneNumber: '1234567890' }`
+Returns `'(123) 456-7890'`
 
-Given `"123"`
+Given `'123'`
 Renders the UI

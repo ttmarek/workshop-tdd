@@ -1,8 +1,5 @@
 function phoneNumberEntered(input) {
-  return {
-    type: 'PHONE_NUMBER_ENTERED',
-    payload: input.trim(),
-  };
+  return { type: 'PHONE_NUMBER_ENTERED', payload: input };
 }
 
 module.exports = {

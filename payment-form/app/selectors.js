@@ -1,12 +1,20 @@
-function getFormattedPhoneNumber(state) {
-  const phoneNumber = state.phoneNumber;
-  if (phoneNumber.length < 4) {
-    return phoneNumber;
-  }
+function formatPhoneNumber(phoneNumber) {
   const part1 = phoneNumber.slice(0, 3);
   const part2 = phoneNumber.slice(3, 6);
   const part3 = phoneNumber.slice(6, 10);
-  return part3.length > 0 ? `(${part1}) ${part2}-${part3}` : `(${part1}) ${part2}`;
+
+  switch (true) {
+    case part1.length === 0:
+      return '';
+    case part2.length === 0:
+      return `(${part1}`;
+    case part3.length === 0:
+      return `(${part1}) ${part2}`;
+    default:
+      return `(${part1}) ${part2}-${part3}`;
+  }
 }
 
-module.exports = { getFormattedPhoneNumber };
+module.exports = {
+  formatPhoneNumber,
+};

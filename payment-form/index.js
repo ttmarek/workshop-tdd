@@ -1,13 +1,13 @@
 const { createStore } = require('redux');
 const { renderUI } = require('./app/render-ui');
 const { reducer } = require('./app/reducer');
-const { getFormattedPhoneNumber } = require('./app/selectors');
+const { formatPhoneNumber } = require('./app/selectors');
 const { phoneNumberEntered } = require('./app/action-creators');
 
 const store = createStore(reducer);
 
 store.subscribe(() => {
-  const phoneNumber = getFormattedPhoneNumber(store.getState());
+  const phoneNumber = formatPhoneNumber(store.getState());
   renderUI(phoneNumber);
 });
 

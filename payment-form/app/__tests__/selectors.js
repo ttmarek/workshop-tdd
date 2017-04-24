@@ -3,7 +3,7 @@ const {
   formatPhoneNumber,
 } = require('../selectors');
 
-describe('formatPhoneNumber(number)', () => {
+describe('foromatPhoneNumber(number)', () => {
   [
     ['', ''],
     ['1', '(1'],

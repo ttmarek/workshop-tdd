@@ -10,7 +10,7 @@ And,
 1. I am prevented from entering in letters
 2. I am prevented from entering in more than 10 digits
 3. I am given on-the-fly phone number formatting as I type:
-   3.1. On the first three digits, no formatting: "123"
+   3.1. On the first digit: "(1"
    3.2. On the fourth digit: "(123) 4"
    3.3. On the seventh digit: "(123) 456-7"
    3.4. On the tenth digit: "(123) 456-7890"
@@ -18,11 +18,12 @@ And,
 
 ## Technical Requirements (agreed as a team)
  1. Using Redux to manage state
- 2. The phone number will be stored under the key `phoneNumber`
- 3. Redux will store the absolute minimal representation of the state
+ 2. Redux will store the absolute minimal representation of the state
     of the app. That is, the phone number should be stored as a string
     of digits with no formatting.
 
+## Links
+ - https://www.dominos.ca/pages/customer/#/customer/profile/new
 
 TR1 (Redux)
 Given `'123'`
